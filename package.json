@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-starter",
+  "name": "nextjs-boilerplate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -32,5 +32,6 @@
     "prettier": "3.2.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  }
+  },
+  "author": "Nhan Luong"
 }
