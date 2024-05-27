@@ -1,9 +1,14 @@
-import { Metadata } from "next";
-import React from "react";
+import { Metadata } from 'next';
+import React from 'react';
 
 export const metadata: Metadata = {
-  title: "Product Layout",
-  description: "Product layout description",
+  title: 'Product Layout',
+  description: 'Product layout description',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    // ... add more open graph meta tags
+  },
 };
 
 export default function ProductLayout({
