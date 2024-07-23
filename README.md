@@ -103,6 +103,9 @@ npm run dev
 - The project uses Husky and Lint-staged to run ESLint and Prettier on staged files before committing.
 - Commit messages must follow [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## Eslint configuration
+- The project uses common Eslint configuration for Typescript projects. The configuration is based on [eslint-config-airbnb-typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript) and [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier).
+
 ## Contributing
 
 If you have a question or have found a bug, or have any suggestions for improvement, feel free to create an issue or a pull request. Everyone is welcome.
