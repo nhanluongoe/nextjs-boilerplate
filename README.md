@@ -107,7 +107,7 @@ npm run dev
 
 - The project uses common Eslint configuration for Typescript projects. The configuration is based on the following packages:
   - [eslint-config-airbnb-typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript): Airbnb's ESLint config with TypeScript support.
-- [typescript-eslint](https://typescript-eslint.io/): Enables Eslint to lint TypeScript code.
+  - [typescript-eslint](https://typescript-eslint.io/): Enables Eslint to lint TypeScript code.
 
 ## Contributing
 
