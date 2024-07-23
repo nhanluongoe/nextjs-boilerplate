@@ -19,6 +19,7 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "comma-dangle": "off"
   }
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '@/styles/global.css';
 import { ReactNode } from 'react';
+import { cn } from '@/utils/helpers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          inter.className,
+          'bg-dark text-white min-h-screen m-0 flex place-items-center min-w-[320px]'
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
