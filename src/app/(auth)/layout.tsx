@@ -16,5 +16,7 @@ export default function AuthLayout({
 }: {
   children: Readonly<React.ReactNode>;
 }) {
-  return <div>{children}</div>;
+  return (
+    <div className="text-center mt-0 mx-auto max-w-[1280px]">{children}</div>
+  );
 }

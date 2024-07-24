@@ -43,6 +43,10 @@
   }
 
   .secondary-btn {
-    @apply bg-gray-500 text-white;
+    @apply bgn bg-gray-500 text-white;
+  }
+
+  .danger-btn {
+    @apply btn bg-red-500 text-white;
   }
 }
