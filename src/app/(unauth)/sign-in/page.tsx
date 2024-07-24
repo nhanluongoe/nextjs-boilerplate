@@ -1,4 +1,5 @@
-import { auth, signOut } from '@/libs/auth';
+import { auth } from '@/libs/auth';
+import SignOutForm from '@/components/SignOutForm';
 
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -25,17 +26,7 @@ export default async function SignInPage() {
           <Link href="/profile" className="primary-btn">
             Profile
           </Link>
-          <form
-            action={async () => {
-              'use server';
-
-              await signOut({ redirectTo: '/' });
-            }}
-          >
-            <button className="danger-btn" type="submit">
-              Sign out
-            </button>
-          </form>
+          <SignOutForm />
         </div>
       </div>
     );

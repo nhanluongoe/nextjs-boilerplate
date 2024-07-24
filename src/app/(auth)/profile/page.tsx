@@ -1,6 +1,6 @@
+import SignOutForm from '@/components/SignOutForm';
 import { auth } from '@/libs/auth';
 import Image from 'next/image';
-import SignOutForm from './components/SignOutForm';
 
 export default async function ProfilePage() {
   const session = await auth();

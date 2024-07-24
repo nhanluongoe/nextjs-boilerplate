@@ -7,7 +7,7 @@ export default function SignInForm() {
         action={async () => {
           'use server';
 
-          await signIn('github');
+          await signIn('github', { redirectTo: '/' });
         }}
       >
         <button className="primary-btn" type="submit">
