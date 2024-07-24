@@ -29,7 +29,7 @@ export default async function SignInPage() {
             action={async () => {
               'use server';
 
-              await signOut();
+              await signOut({ redirectTo: '/' });
             }}
           >
             <button className="danger-btn" type="submit">

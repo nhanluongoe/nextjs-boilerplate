@@ -49,4 +49,8 @@
   .danger-btn {
     @apply btn bg-red-500 text-white;
   }
+
+  .link {
+    @apply text-blue-500;
+  }
 }

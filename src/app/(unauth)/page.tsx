@@ -1,3 +1,4 @@
+import { auth } from '@/libs/auth';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -11,17 +12,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function IndexPage() {
+export default async function IndexPage() {
+  const session = await auth();
+
   return (
-    <div className="text-center mt-0 mx-auto max-w-[1280px]">
+    <div className="text-center">
       <h1>Index Page</h1>
       <p className="mb-3">
         This is the index page of unauth routes. This may be the landing page
       </p>
       <div className="flex gap-3 justify-center">
-        <Link href="/sign-in" className="primary-btn">
-          Sign in
-        </Link>
+        {session ? (
+          <Link href="/profile" className="primary-btn">
+            Profile
+          </Link>
+        ) : (
+          <Link href="/sign-in" className="primary-btn">
+            Sign in
+          </Link>
+        )}
       </div>
     </div>
   );
