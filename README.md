@@ -15,6 +15,7 @@ A Next.js boilerplate that helps you get jump right into building your app witho
 - [x] SEO-friendly: Meta tags, Open Graph, sitemap.xml and robots.txt
 - [x] Absolute imports: Import directories and files using the @ alias
 - [x] Route grouping: Group routes for auth and public pages
+- [x] Authenticated routes: Routes are protected using Auth.js
 
 ## Getting Started
 
@@ -36,52 +37,45 @@ npm run dev
 
 ## Project Structure
 
-- All common things (project-wide) are placed in the `src` directory. This includes components, types, styles, and utility functions. This is where we put things that are shared across the project.
+- All common things (project-wide, global) are placed in the `src` directory. This includes components, types, styles, and utility functions. This is where we put things that are shared across the project.
 - In the project wide components, we have `ui` directory that contains atomic design components like `Button`, `Tag`. Outside of the `ui` directory, there are components composed of atomic components like `Header`, `Footer`.
-- In the `app` directory we have domains/features. This includes components, types, ... that are only used in that domain/feature.
+- In the `app` directory we have domains/features. This includes components, types, hooks, api (route handler) ... that are only used in that domain/feature. Basically these directories include things similar to the global things but are only used in the domain/feature.
 - The project uses Next.js App Router to handle routing. The router is divided into two groups: `auth` and `unauth`. The `auth` group contains routes that require authentication, while the `unauth` group contains public routes.
 
 ```
 |-- public                              # Static files
 |-- src                                 # Next.js source directory
 |   |-- app                             # Next.js App Router
-|   |   |-- (auth)                      # Authenticated route group
-|   |   |   |-- layout.tsx
-|   |   |   |-- sign-in                 # Sign-in page
-|   |   |   |   |-- types               # Types for the sign-in page
-|   |   |   |   |   `-- Credential.ts
-|   |   |   |   |-- components          # Components for the sign-in page
-|   |   |   |   |   `-- Form.tsx
+|   |   |-- (auth)                      # (Group) Private routes
+|   |   |   |-- layout.tsx              # Authenticated layout
+|   |   |   |-- profile                 # (Module) Profile page
 |   |   |   |   `-- page.tsx
-|   |   |   `-- sign-up                 # Sign-up page
-|   |   |       |-- types               # Types for the sign-up page
-|   |   |       |   `-- Credential.ts
-|   |   |       |-- components
-|   |   |       |   `-- Form.tsx
-|   |   |       `-- page.tsx
-|   |   |-- (unauth)                    # Public route group
-|   |   |   |-- page.tsx
-|   |   |   `-- products                # Products page
-|   |   |       |-- components          # Components for the products page
-|   |   |       |   `-- Card.tsx
+|   |   |-- (unauth)                    # (Group) Public routes
+|   |   |   |-- layout.tsx              # Unauthenticated layout
+|   |   |   |-- page.tsx                # Unauthenticated index page
+|   |   |   `-- products                # (Module) Product page
+|   |   |       |-- components          # Components for the product page
+|   |   |       |   `-- ProductCard.tsx
 |   |   |       |-- layout.tsx
 |   |   |       `-- page.tsx
-|   |   |-- layout.tsx
+|   |   |-- layout.tsx                  # App layout
 |   |   |-- robots.ts                   # Robots.txt
 |   |   `-- sitemap.ts                  # Sitemap.xml
-|   |-- components                      # Project-wide components
-|   |   |-- Footer.tsx                  # Composed of atomic design components
+|   |-- components                      # Global components
+|   |   |-- Footer.tsx
 |   |   |-- Header.tsx
 |   |   `-- ui                          # Atomic design components
 |   |       |-- Button.tsx
 |   |       `-- Tag.tsx
+|   |-- api                             # Global API route handlers
+|   |   `-- auth
 |   |-- styles
-|   |   `-- global.css                  # Project-wide styles
-|   |-- types                           # Project-wide types
+|   |   `-- global.css                  # Global styles
+|   |-- types                           # Global types
 |   |   `-- global.ts
 |   |-- libs                            # 3rd-party libraries
-|   |   `-- axios.ts
-|   `-- utils                           # Project-wide utility functions
+|   |   `-- auth.ts
+|   `-- utils                           # Global utility functions
 |       `-- helpers.ts
 |-- tailwind.config.ts                  # TailwindCSS configuration
 |-- .eslintrc.json                      # ESLint configuration
