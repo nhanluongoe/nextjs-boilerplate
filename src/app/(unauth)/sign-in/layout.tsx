@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import React from 'react';
 
 export const metadata: Metadata = {
-  title: 'Product Layout',
-  description: 'Product layout description',
+  title: 'Sign In Layout Page',
+  description: 'Desc for Sign In Layout Page',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ProductLayout({
+export default function SignInLayout({
   children,
 }: {
   children: Readonly<React.ReactNode>;

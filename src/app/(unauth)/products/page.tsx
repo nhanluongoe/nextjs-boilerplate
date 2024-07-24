@@ -11,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function ProductPage() {
-  return <div>ProductPage</div>;
+  return <div>Product Page</div>;
 }

@@ -22,9 +22,6 @@ export default function IndexPage() {
         <Link href="/sign-in" className="primary-btn">
           Sign in
         </Link>
-        <Link href="/sign-up" className="primary-btn">
-          Sign up
-        </Link>
       </div>
     </div>
   );
