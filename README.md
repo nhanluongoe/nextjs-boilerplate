@@ -17,7 +17,9 @@ A Next.js boilerplate that helps you get jump right into building your app witho
 - [x] Route grouping: Group routes for auth and public pages
 - [x] Authenticated routes: Routes are protected using Auth.js
 
-## Getting Started
+## Use this boilerplate
+
+You can either clone this repository using command line or clicking on the "Use this template" button to create a new repository with the same directory structure.
 
 ```bash
 ## Clone the repository
