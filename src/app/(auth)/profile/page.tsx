@@ -1,5 +1,6 @@
-import { auth, signOut } from '@/libs/auth';
+import { auth } from '@/libs/auth';
 import Image from 'next/image';
+import SignOutForm from './components/SignOutForm';
 
 export default async function ProfilePage() {
   const session = await auth();
@@ -22,17 +23,7 @@ export default async function ProfilePage() {
         {email}
       </p>
       <Image src={image!} alt={name!} width={280} height={280} />
-      <form
-        action={async () => {
-          'use server';
-
-          await signOut({ redirectTo: '/' });
-        }}
-      >
-        <button type="submit" className="danger-btn">
-          Sign Out
-        </button>
-      </form>
+      <SignOutForm />
     </div>
   );
 }
