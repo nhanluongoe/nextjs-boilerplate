@@ -14,16 +14,16 @@ export default async function ProfilePage() {
   return (
     <div>
       <h1>Profile</h1>
-      <p>
-        Name:
-        {name}
+      <p className="text-zinc-300">
+        This page is protected. You can only see your own profile when you are
+        signed in.
       </p>
-      <p>
-        Email:
-        {email}
-      </p>
-      <Image src={image!} alt={name!} width={280} height={280} />
-      <SignOutForm />
+      <div className="flex flex-col place-items-center my-3">
+        <p>Name: {name}</p>
+        <p>Email: {email}</p>
+        <Image src={image!} alt={name!} width={280} height={280} />
+        <SignOutForm />
+      </div>
     </div>
   );
 }
