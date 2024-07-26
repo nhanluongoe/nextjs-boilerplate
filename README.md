@@ -15,7 +15,7 @@ A Next.js boilerplate that helps you get jump right into building your app witho
 - [x] SEO-friendly: Meta tags, Open Graph, sitemap.xml and robots.txt
 - [x] Absolute imports: Import directories and files using the @ alias
 - [x] Route grouping: Group routes for auth and public pages
-- [x] Authenticated routes: Routes are protected using Auth.js
+- [x] Authenticated routes: Routes are protected using [NextAuth](https://authjs.dev/)
 
 ## Use this boilerplate
 
