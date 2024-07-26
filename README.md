@@ -4,37 +4,28 @@ A Next.js boilerplate that helps you get jump right into building your app witho
 
 ## Features
 
-- [x] Next.js: Full-fledged framework for React apps
-- [x] Typescript: Type checking and better code quality
-- [x] TailwindCSS: Utility-first CSS framework
-- [x] ESLint: Pluggable linting utility for JavaScript
-- [x] Prettier: Opinionated code formatter
-- [x] Husky: Git hooks made easy
-- [x] Lint-staged: Run linters on git staged files
-- [x] Commitlint: Lint commit messages
+- [x] [Next.js](https://nextjs.org): Full-fledged framework for React apps
+- [x] [Typescript](https://typescriptlang.org): Type checking and better code quality
+- [x] [TailwindCSS](https://tailwindcss.com/): Utility-first CSS framework
+- [x] [ESLint](https://eslint.org): Pluggable linting utility for JavaScript
+- [x] [Prettier](https://prettier.io): Opinionated code formatter
+- [x] [Husky](https://typicode.github.io/husky): Git hooks made easy
+- [x] [Lint-staged](https://github.com/lint-staged/lint-staged): Run linters on git staged files
+- [x] [Commitlint](https://commitlint.js.org/): Lint commit messages
+- [x] [NextAuth](https://authjs.dev/): Powerful authentication for Next.js
 - [x] SEO-friendly: Meta tags, Open Graph, sitemap.xml and robots.txt
 - [x] Absolute imports: Import directories and files using the @ alias
 - [x] Route grouping: Group routes for auth and public pages
-- [x] Authenticated routes: Routes are protected using [NextAuth](https://authjs.dev/)
 
 ## Use this boilerplate
 
 You can either clone this repository using command line or clicking on the "Use this template" button to create a new repository with the same directory structure.
 
-```bash
-## Clone the repository
+```sh
 git clone --depth=1 https://github.com/nhanluongoe/nextjs-boilerplate.git project-name
-
-## Change directory
 cd project-name
-
-## Install dependencies
 npm install
-
-## Start the development server
 npm run dev
-
-## Head over to http://localhost:3000
 ```
 
 ## Project Structure
