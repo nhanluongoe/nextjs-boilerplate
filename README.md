@@ -2,6 +2,12 @@
 
 A Next.js boilerplate that helps you get jump right into building your app without having to set up everything from scratch every time you start a new project. It comes with a minimal yet scalable setup that includes Next.js, Typescript, TailwindCSS, ESLint, Prettier, Husky, Lint-staged, Commitlint, and SEO-friendly features.
 
+## Live Demo
+
+Check out the live demo of this boilerplate in action:
+
+[https://nextjs-boilerplate-oe.vercel.app](https://nextjs-boilerplate-oe.vercel.app)
+
 ## Features
 
 - [x] [Next.js](https://nextjs.org): Full-fledged framework for React apps
@@ -26,6 +32,16 @@ git clone --depth=1 https://github.com/nhanluongoe/nextjs-boilerplate.git projec
 cd project-name
 npm install
 npm run dev
+```
+
+Make sure you config your NextAuth before running the project. For this boilerplate, it uses Github as the authentication provider so you need to create a Github OAuth app and set the `GITHUB_ID` and `GITHUB_SECRET` environment variables in your `.env` file. You can find more information about how to do this in the [NextAuth documentation](https://authjs.dev/guides/configuring-github).
+
+Basically your .env file should look like this:
+
+```env
+AUTH_SECRET="yourAuthSecret" 
+AUTH_GITHUB_ID=yourGithubClientId
+AUTH_GITHUB_SECRET=yourGithubClientSecret 
 ```
 
 ## Project Structure
