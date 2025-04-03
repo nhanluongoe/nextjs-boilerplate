@@ -11,7 +11,7 @@
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore"
   },
   "dependencies": {
-    "axios": "^1.7.2",
+    "axios": "^1.8.2",
     "clsx": "^2.1.1",
     "eslint-config-airbnb": "^19.0.4",
     "next": "14.2.26",
