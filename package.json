@@ -14,10 +14,10 @@
     "axios": "^1.8.2",
     "clsx": "^2.1.1",
     "eslint-config-airbnb": "^19.0.4",
-    "next": "14.2.26",
+    "next": "^15.2.4",
     "next-auth": "^5.0.0-beta.25",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
