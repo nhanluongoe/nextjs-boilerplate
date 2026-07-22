@@ -28,29 +28,26 @@
     @apply text-base font-bold mb-4;
   }
 
-  h7 {
-    @apply text-sm font-bold mb-4;
-  }
 }
 
 @layer components {
   .btn {
-    @apply px-4 py-2 rounded;
+    @apply inline-flex items-center justify-center rounded px-4 py-2 font-medium transition-colors;
   }
 
   .primary-btn {
-    @apply btn bg-blue-500 text-white;
+    @apply btn bg-blue-500 text-white hover:bg-blue-600;
   }
 
   .secondary-btn {
-    @apply bgn bg-gray-500 text-white;
+    @apply btn bg-gray-500 text-white hover:bg-gray-600;
   }
 
   .danger-btn {
-    @apply btn bg-red-500 text-white;
+    @apply btn bg-red-500 text-white hover:bg-red-600;
   }
 
   .link {
-    @apply text-blue-500;
+    @apply text-blue-400 hover:text-blue-300;
   }
 }

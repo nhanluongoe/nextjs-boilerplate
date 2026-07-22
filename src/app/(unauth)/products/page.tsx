@@ -39,6 +39,7 @@ export default function ProductPage() {
       <div className="flex gap-2">
         {MOCK_PRODUCTS.map((product) => (
           <ProductCard
+            key={product.id}
             name={product.name}
             description={product.description}
             price={product.price}

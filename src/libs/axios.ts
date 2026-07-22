@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://api.example.com',
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  timeout: 10_000,
 });
 
 export default instance;
