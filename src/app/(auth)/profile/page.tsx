@@ -10,6 +10,7 @@ export default async function ProfilePage() {
   if (!user) return null;
 
   const { name, email, image } = user;
+  const displayName = name ?? 'Signed-in user';
 
   return (
     <div>
@@ -19,9 +20,11 @@ export default async function ProfilePage() {
         signed in.
       </p>
       <div className="flex flex-col place-items-center my-3">
-        <p>Name: {name}</p>
-        <p>Email: {email}</p>
-        <Image src={image!} alt={name!} width={280} height={280} />
+        <p>Name: {displayName}</p>
+        <p>Email: {email ?? 'No email provided'}</p>
+        {image ? (
+          <Image src={image} alt={displayName} width={280} height={280} />
+        ) : null}
         <SignOutForm />
       </div>
     </div>

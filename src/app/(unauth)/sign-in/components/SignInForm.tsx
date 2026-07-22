@@ -1,4 +1,5 @@
 import { signIn } from '@/libs/auth';
+import Button from '@/components/ui/Button';
 
 export default function SignInForm() {
   return (
@@ -10,9 +11,9 @@ export default function SignInForm() {
           await signIn('github', { redirectTo: '/' });
         }}
       >
-        <button className="primary-btn" type="submit">
+        <Button type="submit">
           Sign in with Github
-        </button>
+        </Button>
       </form>
     </div>
   );

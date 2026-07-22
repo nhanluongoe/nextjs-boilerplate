@@ -3,7 +3,7 @@ import { type ClassValue, clsx } from 'clsx';
 
 export const getBaseUrl = () => {
   if (process.env.NEXT_PUBLIC_APP_URL) {
-    return process.env.NEXT_PUBLIC_APP_URL;
+    return process.env.NEXT_PUBLIC_APP_URL.replace(/\/$/, '');
   }
 
   if (process.env.VERCEL_URL) {
